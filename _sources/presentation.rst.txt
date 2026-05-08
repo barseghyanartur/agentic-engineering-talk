@@ -281,7 +281,7 @@ Harness tools like `OpenCode`_ and `Claude Code`_ have a `plan` mode.
 
     github.com/obra/superpowers/skills/brainstorming/SKILL.md
 
-.. literalinclude:: superpowers-brainstorming-skill.md
+.. literalinclude:: examples/superpowers_brainstorming_SKILL_example.md
 
 .. revealjs-break::
     :notitle:
