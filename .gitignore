@@ -1,0 +1,11 @@
+_build/
+.ipynb_checkpoints/
+.venv/
+generated_image.png
+data/
+*.db
+.storage-service-account.json
+.storage-service-account.json.secret
+__marimo__
+*.pdf
+output/

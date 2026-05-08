@@ -1,0 +1,202 @@
+[project]
+name = "presentation"
+description = "Presentation"
+readme = "README.rst"
+version = "0.1"
+authors = [
+    {name = "Artur Barseghyan", email = "artur.barseghyan@gmail.com"},
+]
+maintainers = [
+    {name = "Artur Barseghyan", email = "artur.barseghyan@gmail.com"},
+]
+license = "MIT"
+
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: 3.15",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python",
+    "Topic :: Software Development :: Testing",
+    "Topic :: Software Development",
+]
+keywords = ["presentation"]
+dependencies = [
+    "IPython",
+    "doc8",
+    "fake.py",
+    "pydantic",
+    "pygments",
+    "pytest",
+    "pytest-codeblock",
+    "python-dotenv",
+    "ruff",
+    "sphinx",
+    "sphinx-design",
+    "sphinx-no-pragma",
+    "sphinx-revealjs",
+    "sphinx-rtd-theme",
+    "structlog",
+    "pandoc",
+    "markdown",
+    "sphinx_termynal",
+]
+
+
+[tool.setuptools]
+package-dir = {"" = "."}
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = [".", ".*"]
+
+[tool.black]
+line-length = 80
+target-version = ['py38', 'py39', 'py310', 'py311']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # The following are specific to Black, you probably don't want those.
+  | blib2to3
+  | tests/data
+  | profiling
+  | migrations
+  | wetty
+  | venv
+)/
+'''
+
+[tool.ruff]
+line-length = 80
+lint.select = [
+    "B",  # Bugbear
+    "C4",  # Complexity
+    "E",  # Pycodestyle errors
+    "F",  # Pyflakes errors
+    "G",  # Logging format
+    "I",  # Import sorting
+    "ISC",  # Naming
+    "INP",  # Implicit namespace
+    "N",  # Naming
+    "PERF",  # Performance
+    "Q",  # Q for Q
+    "SIM",  # Simplify
+    "TD",  # TODO formatting
+]
+lint.ignore = [
+    "G004",  # Allow f-strings in logging
+    "ISC003",
+    "TD002",
+    "TD003",
+]
+# Enable auto-fix for formatting and import sorting
+fix = true
+src = ["."]
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+    "docs",
+]
+lint.dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+target-version = "py39"
+
+[tool.ruff.lint.per-file-ignores]
+"conftest.py" = ["PERF203"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["pytest_codeblock"]
+known-third-party = []
+
+[tool.doc8]
+ignore-path = [
+    "docs/requirements.txt",
+    "src/pytest-codeblock.egg-info/SOURCES.txt",
+    "examples/customisation_example/*.rst",
+    "examples/customisation_example/*.rst.txt",
+    "examples/customisation_example/*.md",
+    "examples/customisation_example/*.md.txt",
+]
+
+[tool.pytest.ini_options]
+addopts = [
+    "-ra",
+    "-vvv",
+    "-q",
+    "--cov=pytest_codeblock",
+    "--ignore=.tox",
+    "--ignore=requirements",
+    "--ignore=release",
+    "--ignore=tmp",
+    "--cov-report=html",
+    "--cov-report=term",
+    "--cov-report=annotate",
+    "--cov-append",
+    "--capture=no",
+]
+testpaths = [
+    "**/test*.py",
+    "**/*.rst",
+    "**/*.md",
+]
+pythonpath = [
+    ".",
+]
+norecursedirs = [".git"]
+
+markers = [
+    "slow: mark a test that takes a long time to run.",
+    # "codeblock: pytest-codeblock markers",
+    "aws: mark test as a AWS test",
+    "documentation: mark test as a documentation test",
+    "fakepy: mark test as a fake.py test",
+    "openai: mark test as a openai test",
+]
+
+[tool.coverage.run]
+relative_files = true
+omit = [".tox/*"]
+
+[tool.coverage.report]
+show_missing = true
+exclude_lines = [
+    "pragma: no cover",
+    "@overload",
+]
+
+[tool.mypy]
+check_untyped_defs = true
+warn_unused_ignores = true
+warn_redundant_casts = true
+warn_unused_configs = true
+ignore_missing_imports = true
+
+[tool.pydoclint]
+style = "sphinx"
+exclude = "\\.git|\\.tox|tests/data|\\.venv"
+require-return-section-when-returning-nothing = false
+allow-init-docstring = true
+arg-type-hints-in-docstring = false
