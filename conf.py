@@ -22,7 +22,6 @@ extensions = [
     "sphinx_design",
     "sphinx_revealjs",
     "sphinx_revealjs.ext.footnotes",
-    "sphinx_termynal",
 ]
 
 templates_path = ["_templates"]
