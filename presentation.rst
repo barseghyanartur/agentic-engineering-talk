@@ -39,7 +39,7 @@ The era of agents...
 ====================
 .. div:: sd-d-flex-row sd-align-major-center
 
-    .. image:: images/new/agent_cleo.png
+    .. image:: images/agent_cleo.png
        :width: 800px
        :alt: When you prompt an LLM with "just build me X"
        :align: center
@@ -53,7 +53,7 @@ It's time to put AI on rails!
 
 .. div:: sd-d-flex-row sd-align-major-center
 
-    .. image:: images/new/cleo_train_plan.png
+    .. image:: images/cleo_train_plan.png
        :width: 800px
        :alt: It's time to put AI on rails!
        :align: center
@@ -238,7 +238,7 @@ In the past (pre LLMs) we used to write a spec...
 
 .. div:: sd-d-flex-row sd-align-major-center
 
-    .. image:: images/new/cleo_diagrams.png
+    .. image:: images/cleo_diagrams.png
        :height: 800px
        :alt: Write it down first, then ask the LLM
        :align: center
@@ -343,7 +343,7 @@ But let's show BEFORE and AFTER
 
 .. div:: sd-d-flex-row sd-align-major-center
 
-    .. image:: images/new/confronting_the_agents.png
+    .. image:: images/confronting_the_agents.png
        :height: 800px
        :alt: Confronting the agents without AGENTS.md and SKILL.md
        :align: center
@@ -404,7 +404,7 @@ Even if the agent is able to do it, it will likely fail to:
 
 .. div:: sd-d-flex-row sd-align-major-center
 
-    .. image:: images/new/doubts_3_v2.png
+    .. image:: images/doubts_3_v2.png
        :height: 800px
        :alt: Write it down first, then ask the LLM
        :align: center
@@ -457,7 +457,7 @@ Bootstrapping
 
 .. div:: sd-d-flex-row sd-align-major-center
 
-    .. image:: images/new/very_exciting_1.png
+    .. image:: images/very_exciting_1.png
        :height: 800px
        :alt: Awesome!
        :align: center
@@ -467,7 +467,7 @@ Step 2: Tryout with AGENTS.md and SKILL.md
 
 .. div:: sd-d-flex-row sd-align-major-center
 
-    .. image:: images/new/fighting_agents_with_skills.png
+    .. image:: images/fighting_agents_with_skills.png
        :height: 800px
        :alt: Fighting the agents with AGENTS.md and SKILL.md
        :align: center
@@ -505,7 +505,7 @@ Enjoy watching the agent
 
 .. div:: sd-d-flex-row sd-align-major-center
 
-    .. image:: images/new/very_exciting_1.png
+    .. image:: images/very_exciting_1.png
        :height: 800px
        :alt: Awesome!
        :align: center
@@ -540,7 +540,7 @@ Step 3: Create a specific SKILL.md for migrating from `mypy` to `ty`
 
 .. div:: sd-d-flex-row sd-align-major-center
 
-    .. image:: images/new/very_exciting_1.png
+    .. image:: images/very_exciting_1.png
        :height: 800px
        :alt: Awesome!
        :align: center
@@ -578,7 +578,7 @@ Step 4: Auto-updating documentation
 
 .. div:: sd-d-flex-row sd-align-major-center
 
-    .. image:: images/new/very_exciting_1.png
+    .. image:: images/very_exciting_1.png
        :height: 800px
        :alt: Awesome!
        :align: center
@@ -707,7 +707,7 @@ Questions
 
 .. div:: sd-d-flex-row sd-align-major-center
 
-    .. image:: images/new/very_exciting_1.png
+    .. image:: images/very_exciting_1.png
        :height: 800px
        :alt: Awesome!
        :align: center
