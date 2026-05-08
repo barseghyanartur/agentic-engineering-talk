@@ -47,6 +47,7 @@ dependencies = [
     "pandoc",
     "markdown",
     "sphinx_termynal",
+    "sphinx-toolbox",
 ]
 
 
