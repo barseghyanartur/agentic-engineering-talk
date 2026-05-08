@@ -1,0 +1,2011 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Agentic Engineering</title>
+    <link rel="stylesheet" type="text/css" href="_static/revealjs/dist/reveal.css?v=d4488b42" />
+    <link rel="stylesheet" href="_static/revealjs/dist/theme/black.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" />
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/barseghyanartur/jsphinx/src/css/sphinx_rtd_theme.css" />
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
+    <link rel="stylesheet" type="text/css" href="/html/_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/revealjs/plugin/highlight/monokai.css?v=075166d3" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-revealjs/css/footnotes.css?v=c46a0db2" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/barseghyanartur/jsphinx/src/js/download_adapter.js"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  </head><body>
+    <div class="reveal">
+        <div class="slides" role="main">
+            <section >
+<section >
+<h1>Agentic Engineering</h1>
+</section>
+</section>
+<section >
+<section >
+<h2>The problem</h2>
+<ul class="simple">
+<li><p>LLMs are only as good as the context you give them</p></li>
+<li><p>Vague instructions → vague results</p></li>
+<li><p>No structure → no reliability</p></li>
+</ul>
+</section>
+</section>
+<section >
+<section >
+<h2>The era of agents…</h2>
+<div class="sd-d-flex-row sd-align-major-center docutils">
+<a class="reference internal image-reference" href="images/new/agent_cleo.png"><img alt="When you prompt an LLM with &quot;just build me X&quot;" class="align-center" src="images/new/agent_cleo.png" style="width: 800px;" />
+</a>
+</div>
+</section>
+</section>
+<section >
+<section >
+<h2>Structural approach needed</h2>
+<p>It’s time to put AI on rails!</p>
+</section>
+<section >
+<div class="sd-d-flex-row sd-align-major-center docutils">
+<a class="reference internal image-reference" href="images/new/cleo_train_plan.png"><img alt="It's time to put AI on rails!" class="align-center" src="images/new/cleo_train_plan.png" style="width: 800px;" />
+</a>
+</div>
+</section>
+</section>
+<section >
+<section >
+<h2>New concepts/standards</h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://llmstxt.org/">llms.txt</a></p></li>
+<li><p><a class="reference external" href="https://agents.md/">AGENTS.md</a></p></li>
+<li><p><a class="reference external" href="https://skill.md/">SKILL.md</a></p></li>
+<li><p>MCP</p></li>
+<li><p>Agent Harness (<a class="reference external" href="https://claude.ai/code">Claude Code</a>, <a class="reference external" href="https://opencode.ai/">OpenCode</a>, etc.)</p></li>
+<li><p>Something news emerges every day</p></li>
+</ul>
+</section>
+<section >
+<h3>llms.txt</h3>
+<ul class="simple">
+<li><p>LLM optimized docs (.md, .rst) written by package/service owners</p></li>
+<li><p>Instructions to install, use, test, and code</p></li>
+<li><p>Faster/better AI consumption → improved accuracy</p></li>
+</ul>
+</section>
+<section >
+<h4>What to look for?</h4>
+<pre data-id="what-to-look-for"><code data-trim data-noescape class="text">- DOMAIN + /llms.txt
+- DOMAIN + /llms-full.txt</code></pre>
+</section>
+<section >
+<h4>Examples</h4>
+<ul class="simple">
+<li><p><a class="reference external" href="https://platform.claude.com/llms.txt">Anthropic</a>: <a class="reference external" href="https://platform.claude.com/llms.txt">https://platform.claude.com/llms.txt</a></p></li>
+<li><p><a class="reference external" href="https://platform.claude.com/llms-full.txt">Anthropic full</a>: <a class="reference external" href="https://platform.claude.com/llms-full.txt">https://platform.claude.com/llms-full.txt</a></p></li>
+<li><p><a class="reference external" href="https://docs.github.com/llms.txt">GitHub</a>: <a class="reference external" href="https://docs.github.com/llms.txt">https://docs.github.com/llms.txt</a></p></li>
+<li><p><a class="reference external" href="https://developers.openai.com/api/docs/llms.txt">OpenAI</a>: <a class="reference external" href="https://developers.openai.com/api/docs/llms.txt">https://developers.openai.com/api/docs/llms.txt</a></p></li>
+<li><p><a class="reference external" href="https://developers.openai.com/api/docs/llms-full.txt">OpenAI full</a>: <a class="reference external" href="https://developers.openai.com/api/docs/llms-full.txt">https://developers.openai.com/api/docs/llms-full.txt</a></p></li>
+<li><p><a class="reference external" href="https://docs.marimo.io/llms.txt">Marimo</a>: <a class="reference external" href="https://docs.marimo.io/llms.txt">https://docs.marimo.io/llms.txt</a></p></li>
+<li><p><a class="reference external" href="https://agentskills.io/llms.txt">Agentskills</a>: <a class="reference external" href="https://agentskills.io/llms.txt">https://agentskills.io/llms.txt</a></p></li>
+<li><p><a class="reference external" href="https://agentskills.io/llms-full.txt">Agentskills full</a>: <a class="reference external" href="https://agentskills.io/llms-full.txt">https://agentskills.io/llms-full.txt</a></p></li>
+</ul>
+</section>
+<section >
+<h3>LLMs can write awesome documentation</h3>
+</section>
+<section >
+<h4>DeepWiki</h4>
+<p><a class="reference external" href="https://deepwiki.com/">deepwiki.com</a></p>
+</section>
+<section >
+<h4>Works as MCP for OpenCode</h4>
+<pre data-id="works-as-mcp-for-opencode"><code data-trim data-noescape class="json">&quot;mcp&quot;: {
+  &quot;deepwiki&quot;: {
+    &quot;type&quot;: &quot;remote&quot;,
+    &quot;url&quot;: &quot;https://mcp.deepwiki.com/mcp&quot;,
+    &quot;enabled&quot;: true
+  }
+}</code></pre>
+</section>
+<section >
+<h4>Or Claude Code</h4>
+<pre data-id="or-claude-code"><code data-trim data-noescape class="sh">claude mcp add -s user -t http deepwiki https://mcp.deepwiki.com/mcp</code></pre>
+</section>
+<section >
+<h3>AGENTS.md &amp; SKILL.md</h3>
+<ul class="simple">
+<li><p>Guide agents through codebase</p></li>
+<li><p>Helps write and review code with fewer mistakes</p></li>
+<li><p>DRY, no repetition → get more done</p></li>
+</ul>
+</section>
+<section >
+<h3>A couple of AGENTS.md examples</h3>
+</section>
+<section >
+<div class="sd-fs-3 sd-text-center docutils container">
+<p><em>Filename: github.com/langchain-ai/langchain/AGENTS.md</em></p>
+</div>
+<pre data-id="a-couple-of-agents-md-examples"><code data-trim data-noescape class="markdown"># Global development guidelines for the LangChain monorepo
+
+This document provides context to understand the LangChain Python project and assist with development.
+
+## Project architecture and context
+
+### Monorepo structure
+
+This is a Python monorepo with multiple independently versioned packages that use `uv`.
+
+```txt
+langchain/
+├── libs/
+│   ├── core/             # `langchain-core` primitives and base abstractions
+│   ├── langchain/        # `langchain-classic` (legacy, no new features)
+│   ├── langchain_v1/     # Actively maintained `langchain` package
+│   ├── partners/         # Third-party integrations
+│   │   ├── openai/       # OpenAI models and embeddings
+│   │   ├── anthropic/    # Anthropic (Claude) integration
+│   │   ├── ollama/       # Local model support
+│   │   └── ... (other integrations maintained by the LangChain team)
+│   ├── text-splitters/   # Document chunking utilities
+│   ├── standard-tests/   # Shared test suite for integrations
+│   ├── model-profiles/   # Model configuration profiles
+├── .github/              # CI/CD workflows and templates
+├── .vscode/              # VSCode IDE standard settings and recommended extensions
+└── README.md             # Information about LangChain
+```
+
+- **Core layer** (`langchain-core`): Base abstractions, interfaces, and protocols. Users should not need to know about this layer directly.
+- **Implementation layer** (`langchain`): Concrete implementations and high-level public utilities
+- **Integration layer** (`partners/`): Third-party service integrations. Note that this monorepo is not exhaustive of all LangChain integrations; some are maintained in separate repos, such as `langchain-ai/langchain-google` and `langchain-ai/langchain-aws`. Usually these repos are cloned at the same level as this monorepo, so if needed, you can refer to their code directly by navigating to `../langchain-google/` from this monorepo.
+- **Testing layer** (`standard-tests/`): Standardized integration tests for partner integrations
+
+### Development tools &amp; commands
+
+- `uv` – Fast Python package installer and resolver (replaces pip/poetry)
+- `make` – Task runner for common development commands. Feel free to look at the `Makefile` for available commands and usage patterns.
+- `ruff` – Fast Python linter and formatter
+- `mypy` – Static type checking
+- `pytest` – Testing framework
+
+This monorepo uses `uv` for dependency management. Local development uses editable installs: `[tool.uv.sources]`
+
+Each package in `libs/` has its own `pyproject.toml` and `uv.lock`.
+
+Before running your tests, set up all packages by running:
+
+```bash
+# For all groups
+uv sync --all-groups
+
+# or, to install a specific group only:
+uv sync --group test
+```
+
+```bash
+# Run unit tests (no network)
+make test
+
+# Run specific test file
+uv run --group test pytest tests/unit_tests/test_specific.py
+```
+
+```bash
+# Lint code
+make lint
+
+# Format code
+make format
+
+# Type checking
+uv run --group lint mypy .
+```
+
+#### Key config files
+
+- pyproject.toml: Main workspace configuration with dependency groups
+- uv.lock: Locked dependencies for reproducible builds
+- Makefile: Development tasks
+
+#### PR and commit titles
+
+Follow Conventional Commits. See `.github/workflows/pr_lint.yml` for allowed types and scopes. All titles must include a scope with no exceptions — even for the main `langchain` package.
+
+- Start the text after `type(scope):` with a lowercase letter, unless the first word is a proper noun (e.g. `Azure`, `GitHub`, `OpenAI`) or a named entity (class, function, method, parameter, or variable name).
+- Wrap named entities in backticks so they render as code. Proper nouns are left unadorned.
+- Keep titles short and descriptive — save detail for the body.
+
+Examples:
+
+```txt
+feat(langchain): add new chat completion feature
+fix(core): resolve type hinting issue in vector store
+chore(anthropic): update infrastructure dependencies
+feat(langchain): `ls_agent_type` tag on `create_agent` calls
+fix(openai): infer Azure chat profiles from model name
+```
+
+#### PR descriptions
+
+The description *is* the summary — do not add a `# Summary` header.
+
+- When the PR closes an issue, lead with the closing keyword on its own line at the very top, followed by a horizontal rule and then the body:
+
+  ```txt
+  Closes #123
+
+  ---
+
+  &lt;rest of description&gt;
+  ```
+
+  Only `Closes`, `Fixes`, and `Resolves` auto-close the referenced issue on merge. `Related:` or similar labels are informational and do not close anything.
+
+- Explain the *why*: the motivation and why this solution is the right one. Limit prose.
+- Write for readers who may be unfamiliar with this area of the codebase. Avoid insider shorthand and prefer language that is friendly to public viewers — this aids interpretability.
+- Do **not** cite line numbers; they go stale as soon as the file changes.
+- Rarely include full file paths or filenames. Reference the affected symbol, class, or subsystem by name instead.
+- Wrap class, function, method, parameter, and variable names in backticks.
+- Skip dedicated &quot;Test plan&quot; or &quot;Testing&quot; sections in most cases. Mention tests only when coverage is non-obvious, risky, or otherwise notable.
+- Call out areas of the change that require careful review.
+- Add a brief disclaimer noting AI-agent involvement in the contribution.
+
+## Core development principles
+
+### Maintain stable public interfaces
+
+CRITICAL: Always attempt to preserve function signatures, argument positions, and names for exported/public methods. Do not make breaking changes.
+You should warn the developer for any function signature changes, regardless of whether they look breaking or not.
+
+**Before making ANY changes to public APIs:**
+
+- Check if the function/class is exported in `__init__.py`
+- Look for existing usage patterns in tests and examples
+- Use keyword-only arguments for new parameters: `*, new_param: str = &quot;default&quot;`
+- Mark experimental features clearly with docstring warnings (using MkDocs Material admonitions, like `!!! warning`)
+
+Ask: &quot;Would this change break someone's code if they used it last week?&quot;
+
+### Code quality standards
+
+All Python code MUST include type hints and return types.
+
+```python title=&quot;Example&quot;
+def filter_unknown_users(users: list[str], known_users: set[str]) -&gt; list[str]:
+    &quot;&quot;&quot;Single line description of the function.
+
+    Any additional context about the function can go here.
+
+    Args:
+        users: List of user identifiers to filter.
+        known_users: Set of known/valid user identifiers.
+
+    Returns:
+        List of users that are not in the `known_users` set.
+    &quot;&quot;&quot;
+```
+
+- Use descriptive, self-explanatory variable names.
+- Follow existing patterns in the codebase you're modifying
+- Attempt to break up complex functions (&gt;20 lines) into smaller, focused functions where it makes sense
+
+### Testing requirements
+
+Every new feature or bugfix MUST be covered by unit tests.
+
+- Unit tests: `tests/unit_tests/` (no network calls allowed)
+- Integration tests: `tests/integration_tests/` (network calls permitted)
+- We use `pytest` as the testing framework; if in doubt, check other existing tests for examples.
+- The testing file structure should mirror the source code structure.
+
+**Checklist:**
+
+- [ ] Tests fail when your new logic is broken
+- [ ] Happy path is covered
+- [ ] Edge cases and error conditions are tested
+- [ ] Use fixtures/mocks for external dependencies
+- [ ] Tests are deterministic (no flaky tests)
+- [ ] Does the test suite fail if your new logic is broken?
+
+### Security and risk assessment
+
+- No `eval()`, `exec()`, or `pickle` on user-controlled input
+- Proper exception handling (no bare `except:`) and use a `msg` variable for error messages
+- Remove unreachable/commented code before committing
+- Race conditions or resource leaks (file handles, sockets, threads).
+- Ensure proper resource cleanup (file handles, connections)
+
+### Documentation standards
+
+Use Google-style docstrings with Args section for all public functions.
+
+```python title=&quot;Example&quot;
+def send_email(to: str, msg: str, *, priority: str = &quot;normal&quot;) -&gt; bool:
+    &quot;&quot;&quot;Send an email to a recipient with specified priority.
+
+    Any additional context about the function can go here.
+
+    Args:
+        to: The email address of the recipient.
+        msg: The message body to send.
+        priority: Email priority level.
+
+    Returns:
+        `True` if email was sent successfully, `False` otherwise.
+
+    Raises:
+        InvalidEmailError: If the email address format is invalid.
+        SMTPConnectionError: If unable to connect to email server.
+    &quot;&quot;&quot;
+```
+
+- Types go in function signatures, NOT in docstrings
+  - If a default is present, DO NOT repeat it in the docstring unless there is post-processing or it is set conditionally.
+- Focus on &quot;why&quot; rather than &quot;what&quot; in descriptions
+- Document all parameters, return values, and exceptions
+- Keep descriptions concise but clear
+- Ensure American English spelling (e.g., &quot;behavior&quot;, not &quot;behaviour&quot;)
+- Do NOT use Sphinx-style double backtick formatting (` ``code`` `). Use single backticks (`` `code` ``) for inline code references in docstrings and comments.
+
+#### Model references in docs and examples
+
+Always use the latest generally available (GA) models when referencing LLMs in docstrings and illustrative code snippets. Avoid preview or beta identifiers unless the model has no GA equivalent. Outdated model names signal stale code and confuse users.
+
+Before writing or updating model references, verify current model IDs against the provider's official docs. Do not rely on memorized or cached model names — they go stale quickly.
+
+Changing **shipped default parameter values** in code (e.g., a `model=` kwarg default in a class constructor) may constitute a breaking change — see &quot;Maintain stable public interfaces&quot; above. This guidance applies to documentation and examples, not code defaults.
+
+For model *profile data* (capability flags, context windows), use the `langchain-profiles` CLI described below.
+
+## Model profiles
+
+Model profiles are generated using the `langchain-profiles` CLI in `libs/model-profiles`. The `--data-dir` must point to the directory containing `profile_augmentations.toml`, not the top-level package directory.
+
+```bash
+# Run from libs/model-profiles
+cd libs/model-profiles
+
+# Refresh profiles for a partner in this repo
+uv run langchain-profiles refresh --provider openai --data-dir ../partners/openai/langchain_openai/data
+
+# Refresh profiles for a partner in an external repo (requires echo y to confirm)
+echo y | uv run langchain-profiles refresh --provider google --data-dir /path/to/langchain-google/libs/genai/langchain_google_genai/data
+```
+
+Example partners with profiles in this repo:
+
+- `libs/partners/openai/langchain_openai/data/` (provider: `openai`)
+- `libs/partners/anthropic/langchain_anthropic/data/` (provider: `anthropic`)
+- `libs/partners/perplexity/langchain_perplexity/data/` (provider: `perplexity`)
+
+The `echo y |` pipe is required when `--data-dir` is outside the `libs/model-profiles` working directory.
+
+## CI/CD infrastructure
+
+### Release process
+
+Releases are triggered manually via `.github/workflows/_release.yml` with `working-directory` and `release-version` inputs.
+
+### PR labeling and linting
+
+**Title linting** (`.github/workflows/pr_lint.yml`)
+
+**Auto-labeling:**
+
+- `.github/workflows/pr_labeler.yml` – Unified PR labeler (size, file, title, external/internal, contributor tier)
+- `.github/workflows/pr_labeler_backfill.yml` – Manual backfill of PR labels on open PRs
+- `.github/workflows/auto-label-by-package.yml` – Issue labeling by package
+- `.github/workflows/tag-external-issues.yml` – Issue external/internal classification
+
+### Adding a new partner to CI
+
+When adding a new partner package, update these files:
+
+- `.github/ISSUE_TEMPLATE/*.yml` – Add to package dropdown
+- `.github/dependabot.yml` – Add dependency update entry
+- `.github/scripts/pr-labeler-config.json` – Add file rule and scope-to-label mapping
+- `.github/workflows/_release.yml` – Add API key secrets if needed
+- `.github/workflows/auto-label-by-package.yml` – Add package label
+- `.github/workflows/check_diffs.yml` – Add to change detection
+- `.github/workflows/integration_tests.yml` – Add integration test config
+- `.github/workflows/pr_lint.yml` – Add to allowed scopes
+
+## GitHub Actions &amp; Workflows
+
+This repository require actions to be pinned to a full-length commit SHA. Attempting to use a tag will fail. Use the `gh` cli to query. Verify tags are not annotated tag objects (which would need dereferencing).
+
+## Additional resources
+
+- **Documentation:** https://docs.langchain.com/oss/python/langchain/overview and source at https://github.com/langchain-ai/docs or `../docs/`. Prefer the local install and use file search tools for best results. If needed, use the docs MCP server as defined in `.mcp.json` for programmatic access.
+- **Contributing Guide:** [Contributing Guide](https://docs.langchain.com/oss/python/contributing/overview)</code></pre>
+</section>
+<section >
+<div class="sd-fs-3 sd-text-center docutils container">
+<p><em>Filename: github.com/barseghyanartur/safezip/AGENTS.md</em></p>
+</div>
+<pre data-id="a-couple-of-agents-md-examples"><code data-trim data-noescape class="markdown"># AGENTS.md — safezip
+
+This file is for AI agents and developers using AI assistants to work on or with
+`safezip`. It covers two distinct roles: **using** the package in application code,
+and **developing/extending** the package itself.
+
+---
+
+## 1. Project Mission (Never Deviate)
+
+&gt; Hardened ZIP extraction for Python — secure by default, zero dependencies,
+&gt; production-grade.
+
+- Secure defaults are never relaxed without an explicit caller decision.
+- No external dependencies. Ever.
+- The three-phase security model (Guard → Sandbox → Streamer) is preserved.
+- No partial files on disk after a security abort.
+
+---
+
+## 2. Using safezip in Application Code
+
+### Simple case
+
+&lt;!-- pytestfixture: file_zip --&gt;
+```python name=test_simple_case
+from safezip import safe_extract
+
+# Secure defaults protect against all common attacks
+safe_extract(&quot;path/to/file.zip&quot;, &quot;/var/files/extracted/&quot;)
+```
+
+### With monitoring and custom limits
+
+&lt;!-- pytestfixture: file_zip --&gt;
+```python name=test_with_monitoring_and_custom_limits
+from safezip import SafeZipFile, SecurityEvent
+
+def monitor(event: SecurityEvent) -&gt; None:
+    print(f&quot;Security event: {event.event_type}&quot;)
+
+with SafeZipFile(
+    &quot;path/to/file.zip&quot;,
+    max_file_size=100 * 1024 * 1024,  # 100 MiB per member
+    on_security_event=monitor,
+) as zf:
+    zf.extractall(&quot;/var/files/extracted/&quot;)
+```
+
+### Exception handling
+
+All safezip exceptions inherit from `SafezipError`:
+
+&lt;!-- pytestfixture: file_zip --&gt;
+```python name=test_exception_handling
+from safezip import (
+    safe_extract,
+    SafezipError,
+    UnsafeZipError,          # path traversal or disallowed symlink
+    CompressionRatioError,   # ZIP bomb attempt
+    FileSizeExceededError,   # member too large
+    TotalSizeExceededError,  # cumulative size exceeded
+    FileCountExceededError,  # too many entries
+    MalformedArchiveError,   # structurally invalid archive
+    NestingDepthError,       # nested archive depth exceeded
+)
+
+try:
+    safe_extract(&quot;path/to/file.zip&quot;, &quot;/var/files/extracted/&quot;)
+except UnsafeZipError:
+    ...
+except CompressionRatioError:
+    ...
+except SafezipError:
+    # catch-all for any safezip violation
+    ...
+```
+
+### Secure defaults reference
+
+&lt;!-- pytestfixture: file_zip --&gt;
+```python name=test_secure_defaults_reference
+from safezip import SafeZipFile, SymlinkPolicy
+
+SafeZipFile(
+    &quot;path/to/file.zip&quot;,
+    max_file_size=1 * 1024**3,       # 1 GiB per member
+    max_total_size=5 * 1024**3,      # 5 GiB total
+    max_files=10_000,
+    max_per_member_ratio=200.0,
+    max_total_ratio=200.0,
+    max_nesting_depth=3,
+    symlink_policy=SymlinkPolicy.REJECT,
+)
+```
+
+All limits are overridable via environment variables:
+
+| Variable | Type | Default |
+| --- | --- | --- |
+| `SAFEZIP_MAX_FILE_SIZE` | int (bytes) | 1 GiB |
+| `SAFEZIP_MAX_TOTAL_SIZE` | int (bytes) | 5 GiB |
+| `SAFEZIP_MAX_FILES` | int | 10 000 |
+| `SAFEZIP_MAX_PER_MEMBER_RATIO` | float | 200.0 |
+| `SAFEZIP_MAX_TOTAL_RATIO` | float | 200.0 |
+| `SAFEZIP_MAX_NESTING_DEPTH` | int | 3 |
+| `SAFEZIP_SYMLINK_POLICY` | str | reject |
+
+Resolution order: constructor argument &gt; environment variable &gt; hardcoded default.
+Invalid env values are logged and silently ignored.
+
+### What safezip does not do
+
+- **Write mode** — `SafeZipFile` is read-only. It does not expose `open()`,
+  `read()`, or any write-mode methods from `zipfile.ZipFile`.
+- **Recursive extraction** — nested `.zip` members are extracted as raw files.
+  Recursion, if needed, is the caller's responsibility via `_nesting_depth`.
+- **Create OS symlinks** — `RESOLVE_INTERNAL` extracts symlink entries as
+  regular files containing the target path as bytes. See section 5.
+
+---
+
+## 3. Architecture
+
+Each extraction passes through three phases in order. Each phase owns exactly
+one module. When adding a new check, identify the correct phase first.
+
+| Phase | File | Runs | Raises |
+| --- | --- | --- | --- |
+| **Guard** | `_guard.py` | On `SafeZipFile.__init__()`, before any decompression | `FileCountExceededError`, `FileSizeExceededError`, `MalformedArchiveError` |
+| **Sandbox** | `_sandbox.py` | Per member, before streaming begins | `UnsafeZipError` |
+| **Streamer** | `_streamer.py` | Per member, during decompression | `FileSizeExceededError`, `TotalSizeExceededError`, `CompressionRatioError` |
+
+**Guard** owns: file count limit, declared per-member size, ZIP64 consistency,
+null bytes in filenames.
+
+**Sandbox** owns: path traversal detection, absolute/UNC path rejection, Unicode
+NFC normalisation, null-byte rejection, path length limit, symlink policy
+(REJECT / IGNORE / RESOLVE_INTERNAL).
+
+**Streamer** owns: per-member decompressed size, cumulative total size,
+per-member ratio, cumulative ratio, atomic write contract (temp file → rename
+on success, unlink on failure).
+
+**Orchestration** (`_core.py`) — `SafeZipFile` and `safe_extract`. `_extract_one`
+calls the three phases in order per member. Environment variable resolution,
+security event emission, and symlink policy dispatch live here.
+
+### Key files
+
+| File | Purpose |
+| --- | --- |
+| `src/safezip/_core.py` | Public API, orchestration, env overrides, event emission |
+| `src/safezip/_guard.py` | Phase A: static pre-checks |
+| `src/safezip/_sandbox.py` | Phase B: path resolution, symlink policy |
+| `src/safezip/_streamer.py` | Phase C: streaming extraction, atomic writes |
+| `src/safezip/_exceptions.py` | Exception hierarchy (all inherit `SafezipError`) |
+| `src/safezip/_events.py` | `SecurityEvent`, `SymlinkPolicy`, callback type |
+| `src/safezip/tests/conftest.py` | All test archive fixtures |
+| `pyproject.toml` | Build, ruff, mypy, pytest-cov configuration |
+| `README.rst` | End-user documentation; keep in sync with code |
+
+---
+
+## 4. Security Principles
+
+**1. Default limits are sacred.**
+Never lower them in examples or generated code. If a user asks you to relax a
+limit, warn about the tradeoff explicitly before complying.
+
+**2. Atomicity is non-negotiable.**
+Every member must follow: temp file → all checks pass → `replace()` to
+destination. On any exception: `unlink(missing_ok=True)` the temp file. The
+destination must never be created or modified if a check fails. No partial
+files may remain on disk.
+
+**3. Never merge phase responsibilities.**
+Path checks belong in `_sandbox.py`. Static header checks in `_guard.py`.
+Runtime byte checks in `_streamer.py`. Do not add path logic to the streamer
+or size logic to the guard.
+
+**4. Zero external dependencies.**
+stdlib only. If you are considering adding an import that is not in the Python
+standard library, the answer is no.
+
+**5. Security events must not be suppressible.**
+Exceptions raised inside `on_security_event` callbacks are caught and logged,
+but the original security exception always propagates. Never let a broken
+callback silently swallow a violation.
+
+---
+
+## 5. Known Intentional Behaviors — Do Not Treat as Bugs
+
+### RESOLVE_INTERNAL extracts symlink entries as regular files
+
+ZIP entries flagged as symlinks (via `external_attr` Unix mode `S_IFLNK`) are
+written as regular files containing the link target path as bytes. Python's
+`zipfile` does not create OS symlinks. The post-extraction `check_symlink` /
+`_verify_symlink_chain` code in `_sandbox.py` is only reached if the OS creates
+an actual symlink, which does not happen in the current extraction path.
+
+This is **safe**: a regular file containing the text `&quot;../escape.txt&quot;` is
+harmless. Real OS symlink creation and chain verification are
+**not yet implemented**; they are future work (see the implementation note
+below).
+
+**If asked to implement real symlink support:** in `_extract_one`, for
+`RESOLVE_INTERNAL` + `is_symlink_entry`, read the target bytes, call
+`os.symlink(target, dest)`, then call `check_symlink(dest, base, policy)`,
+unlink if unsafe. Add tests for both safe and escaping targets. Update README.
+
+### compress_size == 0 skips the ratio check — this is correct
+
+The ratio check in `_streamer.py` is gated on `compress_size &gt; 0`. This is not
+a vulnerability. Python's `zipfile` uses the central directory's `compress_size`
+to control how many compressed bytes it reads. The only case where
+`compress_size == 0` reaches the streamer for a member that successfully
+decompresses is a genuinely empty member (zero bytes), for which skipping the
+ratio check is correct behavior.
+
+A crafted archive with `compress_size=0` in the central directory but non-empty
+content is rejected by Python's `zipfile` with `BadZipFile` (CRC failure) before
+the streamer is reached. This has been empirically verified. **Do not attempt to
+&quot;fix&quot; this skip.**
+
+### Nested archives are extracted as raw files
+
+Members with ZIP-like extensions (`.zip`, `.jar`, `.whl`, `.egg`, etc.) are
+extracted as opaque blobs. `SafeZipFile` does not auto-recurse. The
+`_nesting_depth` parameter and `NestingDepthError` exist to guard against
+runaway recursion if a caller implements manual recursion.
+
+### In-memory archives (BinaryIO) receive full overlap detection
+
+When `SafeZipFile` is instantiated with a `BinaryIO` (e.g., `BytesIO`) instead
+of a filesystem path, the Guard phase now spills the buffer to a temporary
+file to run `detect_zip_bomb()`. This ensures Fifield-style overlap detection
+and extra-field quoting checks are applied to in-memory archives, closing a
+previous bypass. The buffer position is restored after detection so the
+caller's `zipfile.ZipFile` instance is not disturbed.
+
+---
+
+## 6. Agent Workflow: Adding Features or Fixing Bugs
+
+When asked to add a feature or fix a bug, follow these steps in order:
+
+1. **Check the mission** — Does the change preserve zero deps, secure defaults,
+   and the three-phase model?
+2. **Identify the correct phase** — Guard (static/header), Sandbox (path/policy),
+   or Streamer (runtime/bytes).
+3. **For bug fixes: write the regression fixture first** — Add a programmatic
+   archive fixture to `src/safezip/tests/conftest.py` that reproduces the bug.
+   The test must fail before your fix.
+4. **Implement the change** in the correct phase file.
+5. **Add/update exceptions** in `_exceptions.py` if a new error type is needed
+   (inherit from `SafezipError`).
+6. **Add event emission** in `_core.py` (`self._emit_event(&quot;event_type&quot;)`) if
+   the check fires inside `_extract_one`.
+7. **Export** new public symbols from `__init__.py` and `__all__`.
+8. **Write tests:**
+   - Unit test in `test_[phase].py` (e.g., `test_streamer.py`).
+   - Integration test in `test_integration.py` verifying no partial files remain.
+   - Legitimate-input test confirming the happy path still works.
+9. **Update documentation** if you modify public API, CLI, or default limits,
+   by running the `update-documentation` skill after committing. It will scan
+   code vs docs and auto‑fix misalignments.
+10. **MUST run:** Either single environment
+    test `make test-env ENV=py312` or test all environments `make test`.
+11. **MUST run:** `make pre-commit`.
+12. If `pip-audit` fails on `docs/requirements.txt`, run
+    the `make compile-requirements-upgrade` command.
+    &gt; **Note:** `docs/requirements.txt` targets Python ≥ 3.12 (built on
+    &gt; ReadTheDocs with Python 3.14, or locally on Python 3.13). Some pinned
+    &gt; packages (e.g. `ipython&gt;=9`) require Python ≥ 3.12 and are intentional.
+    &gt; Do **not** downgrade them to satisfy older Python versions.
+
+### Acceptable new features
+
+- Windows reserved filename detection (Phase B / Sandbox).
+- Additional event types for new violation categories.
+- Optional recursive extraction (caller-controlled, guarded by `_nesting_depth`).
+- Real OS symlink creation under `RESOLVE_INTERNAL` (see section 5).
+
+### Forbidden
+
+- Adding any external dependency.
+- Lowering default limits.
+- Bypassing or merging phases.
+- Writing directly to the destination path (must use temp file).
+- Exposing write-mode or `open()`/`read()` methods on `SafeZipFile`.
+
+---
+
+## 7. Testing Rules
+
+### All tests must run inside Docker
+
+```sh
+make test                   # full matrix (Python 3.10–3.14)
+make test-env ENV=py312     # single version
+make shell                  # interactive shell
+```
+
+Do not run `pytest` directly on the host machine. Malicious test archives must
+not touch the host filesystem.
+
+### Test layout
+
+```text
+src/safezip/tests/
+    conftest.py          — all archive fixtures (add new ones here)
+    test_guard.py        — Phase A tests
+    test_sandbox.py      — Phase B tests
+    test_streamer.py     — Phase C tests
+    test_integration.py  — end-to-end tests
+```
+
+The **root `conftest.py`** (project root) is for `pytest-codeblock` documentation
+testing only. Do not add security fixtures there.
+
+### Fixture rules
+
+- Craft all test archives programmatically using `struct` or `zipfile`. Do not
+  commit pre-built `.zip` files.
+- Use `tmp_path` for all output. Never write to a fixed path.
+
+### Required assertions for every security abort test
+
+```python
+# 1. pytest.raises wraps the full operation, not just extractall
+with pytest.raises(SpecificError):
+    with SafeZipFile(...) as zf:
+        zf.extractall(dest)
+
+# 2. Atomicity: no partial files remain
+remaining = [f for f in dest.rglob(&quot;*&quot;) if not f.is_dir()]
+assert not remaining
+```
+
+### Checklist for every new security check
+
+- [ ] Fixture in `conftest.py` that triggers the violation
+- [ ] Test asserting the correct exception is raised
+- [ ] Test asserting no partial files remain after abort
+- [ ] Test asserting a legitimate archive still extracts correctly
+- [ ] Integration test in `test_integration.py`
+- [ ] Event emission tested if applicable
+
+---
+
+## 8. Coding Conventions
+
+Run all linting checks:
+
+```sh
+make pre-commit
+```
+
+### Formatting
+
+- Line length: **88 characters** (ruff).
+- Import sorting: `isort`; `safezip` is `known-first-party`.
+- Target: `py310`. Run `make ruff` to check. `ruff fix = true` auto-fixes on
+  commit — do not fight the formatter.
+
+### Ruff rules in effect
+
+`B`, `C4`, `E`, `F`, `G`, `I`, `ISC`, `INP`, `N`, `PERF`, `Q`, `SIM`.
+
+Explicitly ignored:
+
+| Rule | Reason |
+| --- | --- |
+| `G004` | f-strings in logging calls are allowed |
+| `ISC003` | implicit string concatenation across lines is allowed |
+| `PERF203` | `try/except` in loops allowed in `conftest.py` only |
+
+### Style
+
+- Every non-test module must have `__all__`, `__author__`, `__copyright__`,
+  `__license__` at module level.
+- Logger: always `logging.getLogger(&quot;safezip.security&quot;)`. Never use `__name__`.
+- Log member names truncated to 256 characters in `extra` dicts (privacy).
+- Always chain exceptions: `raise X(...) from exc`.
+- Type annotations on all public functions. Use `Optional[X]` (not `X | None`)
+  to match the existing codebase.
+- `SecurityEvent` must never include member names, paths, or filesystem
+  information — `event_type`, `archive_hash`, and `timestamp` only.
+
+### Pull requests
+
+Target the `dev` branch only. Never open a PR directly to `main`.
+
+---
+
+## 9. Prompt Templates
+
+**Explaining usage to a user:**
+&gt; You are an expert in secure Python file handling. Explain how to use safezip
+&gt; for [task]. Start with secure defaults. Include exception handling. Note that
+&gt; symlink entries are extracted as regular files, not OS symlinks.
+
+**Implementing a new feature:**
+&gt; Extend safezip with [feature]. Follow the AGENTS.md agent workflow (section 6):
+&gt; identify the correct phase, implement, add tests verifying atomicity and events,
+&gt; update README. Preserve zero external dependencies and secure defaults.
+
+**Fixing a bug:**
+&gt; Reproduce [bug] with a new programmatic fixture in conftest.py. The test must
+&gt; fail before the fix. Then fix in the correct phase file. Add tests asserting
+&gt; the correct exception, no partial files on disk, and that legitimate archives
+&gt; still extract successfully.
+
+**Reviewing a change:**
+&gt; Review this safezip change against AGENTS.md: Does it preserve zero deps?
+&gt; Does it maintain the three-phase model? Does it follow the atomic write
+&gt; contract? Are all new checks tested with both violation and legitimate inputs?</code></pre>
+</section>
+<section >
+<p>Tip: Use <cite>/init</cite> command to create AGENTS.md for your repository.</p>
+</section>
+<section >
+<h3>A couple of SKILL.md examples</h3>
+</section>
+<section >
+<div class="sd-fs-3 sd-text-center docutils container">
+<p><em>Filename: github.com/marimo-team/skills/jupyter-to-marimo/SKILL.md</em></p>
+</div>
+<pre data-id="a-couple-of-skill-md-examples"><code data-trim data-noescape class="markdown">---
+name: jupyter-to-marimo
+description: Convert a Jupyter notebook (.ipynb) to a marimo notebook (.py).
+---
+
+# Converting Jupyter Notebooks to Marimo
+
+**IMPORTANT**: When asked to translate a notebook, ALWAYS run `uvx marimo convert &lt;notebook.ipynb&gt; -o &lt;notebook.py&gt;` FIRST before reading any files. This saves precious tokens - reading large notebooks can consume 30k+ tokens, while the converted .py file is much smaller and easier to work with.
+
+## Steps
+
+1. **Convert using the CLI**
+
+Run the marimo convert command via `uvx` so no install is needed:
+
+```bash
+uvx marimo convert &lt;notebook.ipynb&gt; -o &lt;notebook.py&gt;
+```
+
+This generates a marimo-compatible `.py` file from the Jupyter notebook.
+
+2. **Run `marimo check` on the output**
+
+```bash
+uvx marimo check &lt;notebook.py&gt;
+```
+
+Fix any issues that are reported before continuing.
+
+3. **Review and clean up the converted notebook**
+
+Read the generated `.py` file and apply the following improvements:
+
+- Ensure the script metadata block lists all required packages. The converter may miss some.
+- Drop leftover Jupyter artifacts like `display()` calls, or `%magic` commands that don't apply in marimo.
+- Make sure the final expression of each cell is the value to render. Indented or conditional expressions won't display.
+- If the original notebook requires environment variables via an input, consider adding the `EnvConfig` widget from wigglystuff. Details can be found [here](https://koaning.github.io/wigglystuff/reference/env-config.md).
+- If the original notebook uses ipywidgets, see `references/widgets.md` for a full mapping of ipywidgets to marimo equivalents, including patterns for callbacks, linking, and anywidget integration.
+- If the notebook contains LaTeX, see `references/latex.md` for how to port MathJax syntax to KaTeX (which marimo uses).
+
+4. **Run `marimo check` again** after your edits to confirm nothing was broken.</code></pre>
+</section>
+<section >
+<div class="sd-fs-3 sd-text-center docutils container">
+<p><em>Filename: github.com/marimo-team/skills/marimo-notebook/SKILL.md</em></p>
+</div>
+<pre data-id="a-couple-of-skill-md-examples"><code data-trim data-noescape class="markdown">---
+name: marimo-notebook
+description: Write a marimo notebook in a Python file in the right format.
+---
+
+# Notes for marimo Notebooks
+
+marimo uses Python to create notebooks, unlike Jupyter which uses JSON. Here's an example notebook:
+
+```python
+# /// script
+# dependencies = [
+#     &quot;marimo&quot;,
+#     &quot;numpy==2.4.3&quot;,
+# ]
+# requires-python = &quot;&gt;=3.14&quot;
+# ///
+
+import marimo
+
+__generated_with = &quot;0.20.4&quot;
+app = marimo.App(width=&quot;medium&quot;)
+
+
+&#64;app.cell
+def _():
+    import marimo as mo
+    import numpy as np
+
+    return mo, np
+
+
+&#64;app.cell
+def _():
+    print(&quot;hello world&quot;)
+    return
+
+
+&#64;app.cell
+def _(np, slider):
+    np.array([1,2,3]) + slider.value
+    return
+
+
+&#64;app.cell
+def _(mo):
+    slider = mo.ui.slider(1, 10, 1, label=&quot;number to add&quot;)
+    slider
+    return (slider,)
+
+
+&#64;app.cell
+def _():
+    return
+
+
+if __name__ == &quot;__main__&quot;:
+    app.run()
+
+```
+
+Notice how the notebook is structured with functions can represent cell contents. Each cell is defined with the `&#64;app.cell` decorator and the inputs/outputs of the function are the inputs/outputs of the cell. marimo usually takes care of the dependencies between cells automatically.
+
+## Running Marimo Notebooks
+
+```bash
+# Run as script (non-interactive, for testing)
+uv run &lt;notebook.py&gt;
+
+# Run interactively in browser
+uv run marimo run &lt;notebook.py&gt;
+
+# Edit interactively
+uv run marimo edit &lt;notebook.py&gt;
+```
+
+## Script Mode Detection
+
+Use `mo.app_meta().mode == &quot;script&quot;` to detect CLI vs interactive:
+
+```python
+&#64;app.cell
+def _(mo):
+    is_script_mode = mo.app_meta().mode == &quot;script&quot;
+    return (is_script_mode,)
+```
+
+## Key Principle: Keep It Simple
+
+**Show all UI elements always.** Only change the data source in script mode.
+
+- Sliders, buttons, widgets should always be created and displayed
+- In script mode, just use synthetic/default data instead of waiting for user input
+- Don't wrap everything in `if not is_script_mode` conditionals
+- Don't use try/except for normal control flow
+
+### Good Pattern
+
+```python
+# Always show the widget
+&#64;app.cell
+def _(ScatterWidget, mo):
+    scatter_widget = mo.ui.anywidget(ScatterWidget())
+    scatter_widget
+    return (scatter_widget,)
+
+# Only change data source based on mode
+&#64;app.cell
+def _(is_script_mode, make_moons, scatter_widget, np, torch):
+    if is_script_mode:
+        # Use synthetic data for testing
+        X, y = make_moons(n_samples=200, noise=0.2)
+        X_data = torch.tensor(X, dtype=torch.float32)
+        y_data = torch.tensor(y)
+        data_error = None
+    else:
+        # Use widget data in interactive mode
+        X, y = scatter_widget.widget.data_as_X_y
+        # ... process data ...
+    return X_data, y_data, data_error
+
+# Always show sliders - use their .value in both modes
+&#64;app.cell
+def _(mo):
+    lr_slider = mo.ui.slider(start=0.001, stop=0.1, value=0.01)
+    lr_slider
+    return (lr_slider,)
+
+# Auto-run in script mode, wait for button in interactive
+&#64;app.cell
+def _(is_script_mode, train_button, lr_slider, run_training, X_data, y_data):
+    if is_script_mode:
+        # Auto-run with slider defaults
+        results = run_training(X_data, y_data, lr=lr_slider.value)
+    else:
+        # Wait for button click
+        if train_button.value:
+            results = run_training(X_data, y_data, lr=lr_slider.value)
+    return (results,)
+```
+
+## State and Reactivity
+
+Variables between cells define the reactivity of the notebook for 99% of the use-cases out there. No special state management needed. Don't mutate objects across cells (e.g., `my_list.append()`); create new objects instead. Avoid `mo.state()` unless you need bidirectional UI sync or accumulated callback state. See [STATE.md](references/STATE.md) for details.
+
+## Don't Guard Cells with `if` Statements
+
+Marimo's reactivity means cells only run when their dependencies are ready. Don't add unnecessary guards:
+
+```python
+# BAD - the if statement prevents the chart from showing
+&#64;app.cell
+def _(plt, training_results):
+    if training_results:  # WRONG - don't do this
+        fig, ax = plt.subplots()
+        ax.plot(training_results['losses'])
+        fig
+    return
+
+# GOOD - let marimo handle the dependency
+&#64;app.cell
+def _(plt, training_results):
+    fig, ax = plt.subplots()
+    ax.plot(training_results['losses'])
+    fig
+    return
+```
+
+The cell won't run until `training_results` has a value anyway.
+
+## Don't Use try/except for Control Flow
+
+Don't wrap code in try/except blocks unless you're handling a specific, expected exception. Let errors surface naturally.
+
+```python
+# BAD - hiding errors behind try/except
+&#64;app.cell
+def _(scatter_widget, np, torch):
+    try:
+        X, y = scatter_widget.widget.data_as_X_y
+        X = np.array(X, dtype=np.float32)
+        # ...
+    except Exception as e:
+        return None, None, f&quot;Error: {e}&quot;
+
+# GOOD - let it fail if something is wrong
+&#64;app.cell
+def _(scatter_widget, np, torch):
+    X, y = scatter_widget.widget.data_as_X_y
+    X = np.array(X, dtype=np.float32)
+    # ...
+```
+
+Only use try/except when:
+- You're handling a specific, known exception type
+- The exception is expected in normal operation (e.g., file not found)
+- You have a meaningful recovery action
+
+## Cell Output Rendering
+
+Marimo only renders the **final expression** of a cell. Indented or conditional expressions won't render:
+
+```python
+# BAD - indented expression won't render
+&#64;app.cell
+def _(mo, condition):
+    if condition:
+        mo.md(&quot;This won't show!&quot;)  # WRONG - indented
+    return
+
+# GOOD - final expression renders
+&#64;app.cell
+def _(mo, condition):
+    result = mo.md(&quot;Shown!&quot;) if condition else mo.md(&quot;Also shown!&quot;)
+    result  # This renders because it's the final expression
+    return
+```
+
+## PEP 723 Dependencies
+
+Notebooks created via `marimo edit --sandbox` have these dependencies added to the top of the file automatically but it is a good practice to make sure these exist when creating a notebook too:
+
+```python
+# /// script
+# requires-python = &quot;&gt;=3.12&quot;
+# dependencies = [
+#     &quot;marimo&quot;,
+#     &quot;torch&gt;=2.0.0&quot;,
+# ]
+# ///
+```
+
+## marimo check
+
+When working on a notebook it is important to check if the notebook can run. That's why marimo provides a `check` command that acts as a linter to find common mistakes.
+
+```bash
+uvx marimo check &lt;notebook.py&gt;
+```
+
+Make sure these are checked before handing a notebook back to the user.
+
+**Important**: you have a tendency to over-do variables with an underscore prefix. You should only apply this to one or two variables at most. Consider creating a new variable instead of prefixing entire cells in marimo.
+
+## api docs
+
+If the user specifically wants you to use a marimo function, you can locally check the docs via:
+
+```
+uv --with marimo run python -c &quot;import marimo as mo; help(mo.ui.form)&quot;
+```
+
+## tests
+
+By default, marimo discovers and executes tests inside your notebook.
+When the optional `pytest` dependency is present, marimo runs `pytest` on cells that
+consist exclusively of test code - i.e. functions whose names start with `test_`.
+If the user asks you to add tests, make sure to add the `pytest` dependency is added and that
+there is a cell that contains only test code.
+
+For more information on testing with pytest see [PYTEST.md](references/PYTEST.md)
+
+Once tests are added, you can run pytest from the commandline on the notebook to run pytest.
+
+```
+pytest &lt;notebook.py&gt;
+```
+
+## Additional resources
+
+- For SQL use in marimo see [SQL.md](references/SQL.md)
+- For UI elements in marimo [UI.md](references/UI.md)
+- For exposing functions/classes as top level imports [TOP-LEVEL-IMPORTS.md](references/TOP-LEVEL-IMPORTS.md)
+- For exporting notebooks (PDF, HTML, markdown, etc.) [EXPORTS.md](references/EXPORTS.md)
+- For state management and reactivity [STATE.md](references/STATE.md)
+- For deployment of marimo notebooks [DEPLOYMENT.md](references/DEPLOYMENT.md)
+- For custom interactive widgets with anywidget [ANYWIDGET.md](references/ANYWIDGET.md)
+- For external editing and `--watch` mode [WATCHING.md](references/WATCHING.md)
+- For expensive notebooks (caching, lazy eval, mo.stop) [EXPENSIVE.md](references/EXPENSIVE.md)
+- For configuration (pyproject.toml, marimo.toml) [CONFIGURATION.md](references/CONFIGURATION.md)
+- For reactivity model (DAG, variable scoping, mutations) [REACTIVITY.md](references/REACTIVITY.md)</code></pre>
+</section>
+<section >
+<div class="sd-fs-3 sd-text-center docutils container">
+<p><em>Filename: github.com/anthropics/skills/pdf/SKILL.md</em></p>
+</div>
+<pre data-id="a-couple-of-skill-md-examples"><code data-trim data-noescape class="markdown">---
+name: pdf
+description: Use this skill whenever the user wants to do anything with PDF files. This includes reading or extracting text/tables from PDFs, combining or merging multiple PDFs into one, splitting PDFs apart, rotating pages, adding watermarks, creating new PDFs, filling PDF forms, encrypting/decrypting PDFs, extracting images, and OCR on scanned PDFs to make them searchable. If the user mentions a .pdf file or asks to produce one, use this skill.
+license: Proprietary. LICENSE.txt has complete terms
+---
+
+# PDF Processing Guide
+
+## Overview
+
+This guide covers essential PDF processing operations using Python libraries and command-line tools. For advanced features, JavaScript libraries, and detailed examples, see REFERENCE.md. If you need to fill out a PDF form, read FORMS.md and follow its instructions.
+
+## Quick Start
+
+```python
+from pypdf import PdfReader, PdfWriter
+
+# Read a PDF
+reader = PdfReader(&quot;document.pdf&quot;)
+print(f&quot;Pages: {len(reader.pages)}&quot;)
+
+# Extract text
+text = &quot;&quot;
+for page in reader.pages:
+    text += page.extract_text()
+```
+
+## Python Libraries
+
+### pypdf - Basic Operations
+
+#### Merge PDFs
+```python
+from pypdf import PdfWriter, PdfReader
+
+writer = PdfWriter()
+for pdf_file in [&quot;doc1.pdf&quot;, &quot;doc2.pdf&quot;, &quot;doc3.pdf&quot;]:
+    reader = PdfReader(pdf_file)
+    for page in reader.pages:
+        writer.add_page(page)
+
+with open(&quot;merged.pdf&quot;, &quot;wb&quot;) as output:
+    writer.write(output)
+```
+
+#### Split PDF
+```python
+reader = PdfReader(&quot;input.pdf&quot;)
+for i, page in enumerate(reader.pages):
+    writer = PdfWriter()
+    writer.add_page(page)
+    with open(f&quot;page_{i+1}.pdf&quot;, &quot;wb&quot;) as output:
+        writer.write(output)
+```
+
+#### Extract Metadata
+```python
+reader = PdfReader(&quot;document.pdf&quot;)
+meta = reader.metadata
+print(f&quot;Title: {meta.title}&quot;)
+print(f&quot;Author: {meta.author}&quot;)
+print(f&quot;Subject: {meta.subject}&quot;)
+print(f&quot;Creator: {meta.creator}&quot;)
+```
+
+#### Rotate Pages
+```python
+reader = PdfReader(&quot;input.pdf&quot;)
+writer = PdfWriter()
+
+page = reader.pages[0]
+page.rotate(90)  # Rotate 90 degrees clockwise
+writer.add_page(page)
+
+with open(&quot;rotated.pdf&quot;, &quot;wb&quot;) as output:
+    writer.write(output)
+```
+
+### pdfplumber - Text and Table Extraction
+
+#### Extract Text with Layout
+```python
+import pdfplumber
+
+with pdfplumber.open(&quot;document.pdf&quot;) as pdf:
+    for page in pdf.pages:
+        text = page.extract_text()
+        print(text)
+```
+
+#### Extract Tables
+```python
+with pdfplumber.open(&quot;document.pdf&quot;) as pdf:
+    for i, page in enumerate(pdf.pages):
+        tables = page.extract_tables()
+        for j, table in enumerate(tables):
+            print(f&quot;Table {j+1} on page {i+1}:&quot;)
+            for row in table:
+                print(row)
+```
+
+#### Advanced Table Extraction
+```python
+import pandas as pd
+
+with pdfplumber.open(&quot;document.pdf&quot;) as pdf:
+    all_tables = []
+    for page in pdf.pages:
+        tables = page.extract_tables()
+        for table in tables:
+            if table:  # Check if table is not empty
+                df = pd.DataFrame(table[1:], columns=table[0])
+                all_tables.append(df)
+
+# Combine all tables
+if all_tables:
+    combined_df = pd.concat(all_tables, ignore_index=True)
+    combined_df.to_excel(&quot;extracted_tables.xlsx&quot;, index=False)
+```
+
+### reportlab - Create PDFs
+
+#### Basic PDF Creation
+```python
+from reportlab.lib.pagesizes import letter
+from reportlab.pdfgen import canvas
+
+c = canvas.Canvas(&quot;hello.pdf&quot;, pagesize=letter)
+width, height = letter
+
+# Add text
+c.drawString(100, height - 100, &quot;Hello World!&quot;)
+c.drawString(100, height - 120, &quot;This is a PDF created with reportlab&quot;)
+
+# Add a line
+c.line(100, height - 140, 400, height - 140)
+
+# Save
+c.save()
+```
+
+#### Create PDF with Multiple Pages
+```python
+from reportlab.lib.pagesizes import letter
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, PageBreak
+from reportlab.lib.styles import getSampleStyleSheet
+
+doc = SimpleDocTemplate(&quot;report.pdf&quot;, pagesize=letter)
+styles = getSampleStyleSheet()
+story = []
+
+# Add content
+title = Paragraph(&quot;Report Title&quot;, styles['Title'])
+story.append(title)
+story.append(Spacer(1, 12))
+
+body = Paragraph(&quot;This is the body of the report. &quot; * 20, styles['Normal'])
+story.append(body)
+story.append(PageBreak())
+
+# Page 2
+story.append(Paragraph(&quot;Page 2&quot;, styles['Heading1']))
+story.append(Paragraph(&quot;Content for page 2&quot;, styles['Normal']))
+
+# Build PDF
+doc.build(story)
+```
+
+#### Subscripts and Superscripts
+
+**IMPORTANT**: Never use Unicode subscript/superscript characters (₀₁₂₃₄₅₆₇₈₉, ⁰¹²³⁴⁵⁶⁷⁸⁹) in ReportLab PDFs. The built-in fonts do not include these glyphs, causing them to render as solid black boxes.
+
+Instead, use ReportLab's XML markup tags in Paragraph objects:
+```python
+from reportlab.platypus import Paragraph
+from reportlab.lib.styles import getSampleStyleSheet
+
+styles = getSampleStyleSheet()
+
+# Subscripts: use &lt;sub&gt; tag
+chemical = Paragraph(&quot;H&lt;sub&gt;2&lt;/sub&gt;O&quot;, styles['Normal'])
+
+# Superscripts: use &lt;super&gt; tag
+squared = Paragraph(&quot;x&lt;super&gt;2&lt;/super&gt; + y&lt;super&gt;2&lt;/super&gt;&quot;, styles['Normal'])
+```
+
+For canvas-drawn text (not Paragraph objects), manually adjust font the size and position rather than using Unicode subscripts/superscripts.
+
+## Command-Line Tools
+
+### pdftotext (poppler-utils)
+```bash
+# Extract text
+pdftotext input.pdf output.txt
+
+# Extract text preserving layout
+pdftotext -layout input.pdf output.txt
+
+# Extract specific pages
+pdftotext -f 1 -l 5 input.pdf output.txt  # Pages 1-5
+```
+
+### qpdf
+```bash
+# Merge PDFs
+qpdf --empty --pages file1.pdf file2.pdf -- merged.pdf
+
+# Split pages
+qpdf input.pdf --pages . 1-5 -- pages1-5.pdf
+qpdf input.pdf --pages . 6-10 -- pages6-10.pdf
+
+# Rotate pages
+qpdf input.pdf output.pdf --rotate=+90:1  # Rotate page 1 by 90 degrees
+
+# Remove password
+qpdf --password=mypassword --decrypt encrypted.pdf decrypted.pdf
+```
+
+### pdftk (if available)
+```bash
+# Merge
+pdftk file1.pdf file2.pdf cat output merged.pdf
+
+# Split
+pdftk input.pdf burst
+
+# Rotate
+pdftk input.pdf rotate 1east output rotated.pdf
+```
+
+## Common Tasks
+
+### Extract Text from Scanned PDFs
+```python
+# Requires: pip install pytesseract pdf2image
+import pytesseract
+from pdf2image import convert_from_path
+
+# Convert PDF to images
+images = convert_from_path('scanned.pdf')
+
+# OCR each page
+text = &quot;&quot;
+for i, image in enumerate(images):
+    text += f&quot;Page {i+1}:\n&quot;
+    text += pytesseract.image_to_string(image)
+    text += &quot;\n\n&quot;
+
+print(text)
+```
+
+### Add Watermark
+```python
+from pypdf import PdfReader, PdfWriter
+
+# Create watermark (or load existing)
+watermark = PdfReader(&quot;watermark.pdf&quot;).pages[0]
+
+# Apply to all pages
+reader = PdfReader(&quot;document.pdf&quot;)
+writer = PdfWriter()
+
+for page in reader.pages:
+    page.merge_page(watermark)
+    writer.add_page(page)
+
+with open(&quot;watermarked.pdf&quot;, &quot;wb&quot;) as output:
+    writer.write(output)
+```
+
+### Extract Images
+```bash
+# Using pdfimages (poppler-utils)
+pdfimages -j input.pdf output_prefix
+
+# This extracts all images as output_prefix-000.jpg, output_prefix-001.jpg, etc.
+```
+
+### Password Protection
+```python
+from pypdf import PdfReader, PdfWriter
+
+reader = PdfReader(&quot;input.pdf&quot;)
+writer = PdfWriter()
+
+for page in reader.pages:
+    writer.add_page(page)
+
+# Add password
+writer.encrypt(&quot;userpassword&quot;, &quot;ownerpassword&quot;)
+
+with open(&quot;encrypted.pdf&quot;, &quot;wb&quot;) as output:
+    writer.write(output)
+```
+
+## Quick Reference
+
+| Task | Best Tool | Command/Code |
+|------|-----------|--------------|
+| Merge PDFs | pypdf | `writer.add_page(page)` |
+| Split PDFs | pypdf | One page per file |
+| Extract text | pdfplumber | `page.extract_text()` |
+| Extract tables | pdfplumber | `page.extract_tables()` |
+| Create PDFs | reportlab | Canvas or Platypus |
+| Command line merge | qpdf | `qpdf --empty --pages ...` |
+| OCR scanned PDFs | pytesseract | Convert to image first |
+| Fill PDF forms | pdf-lib or pypdf (see FORMS.md) | See FORMS.md |
+
+## Next Steps
+
+- For advanced pypdfium2 usage, see REFERENCE.md
+- For JavaScript libraries (pdf-lib), see REFERENCE.md
+- If you need to fill out a PDF form, follow the instructions in FORMS.md
+- For troubleshooting guides, see REFERENCE.md</code></pre>
+</section>
+<section >
+<h3>Documentation validity</h3>
+<ul class="simple">
+<li><p>If docs are wrong/outdated, results will be too</p></li>
+</ul>
+</section>
+<section >
+<h3>Documentation quality</h3>
+<ul class="simple">
+<li><p>If your SKILL.md contains code examples — they need to actually work</p></li>
+<li><p>Automated linting: <a class="reference external" href="https://github.com/igorshubovych/markdownlint-cli">markdownlint</a>, <a class="reference external" href="https://github.com/pycqa/doc8">doc8</a></p></li>
+<li><p>Automated testing: <a class="reference external" href="https://github.com/barseghyanartur/pytest-codeblock">pytest-codeblock</a> for Python</p></li>
+<li><p>Automated syncing of code/documentation: SKILL.md</p></li>
+</ul>
+</section>
+<section >
+<h3>Markdownlint</h3>
+<p>See the official <a class="reference external" href="https://github.com/igorshubovych/markdownlint-cli">markdownlint-cli</a> documentation.</p>
+<pre data-id="id4"><code data-trim data-noescape class="sh">brew install markdownlint-cli</code></pre>
+</section>
+<section >
+<p>Pre-commit config exists:</p>
+<pre data-id="id4"><code data-trim data-noescape class="yaml">- repo: https://github.com/igorshubovych/markdownlint-cli
+  rev: v0.48.0
+  hooks:
+  - id: markdownlint</code></pre>
+</section>
+</section>
+<section >
+<section >
+<h2>Spec-driven development</h2>
+</section>
+<section >
+<h3>In the past (pre LLMs) we used to write a spec…</h3>
+<div class="sd-d-flex-row sd-align-major-center docutils">
+<a class="reference internal image-reference" href="images/new/cleo_diagrams.png"><img alt="Write it down first, then ask the LLM" class="align-center" src="images/new/cleo_diagrams.png" style="height: 800px;" />
+</a>
+</div>
+</section>
+<section >
+<h3>Now we still write specs, but with the help of AI</h3>
+</section>
+<section >
+<h4>1. Write the initial spec — clear, complete, no vague language</h4>
+</section>
+<section >
+<p>Checklist sample:</p>
+<ul class="simple">
+<li><p>If creating a public API, is it easy to consume?</p></li>
+<li><p>What does “happy-path” look like?</p></li>
+<li><p>What does “error-path” look like?</p></li>
+<li><p>What are the alternatives/considered solutions?</p></li>
+<li><p>Write some pseudo code. You should like the API!</p></li>
+<li><p>Am I reinventing the wheel? Can I use/configure an existing library?</p></li>
+<li><p>Less code = less maintenance!</p></li>
+</ul>
+</section>
+<section >
+<h4>2. Consult the LLM — ask for critique, missing pieces, improvements</h4>
+<p>Harness tools like <a class="reference external" href="https://opencode.ai/">OpenCode</a> and <a class="reference external" href="https://claude.ai/code">Claude Code</a> have a <cite>plan</cite> mode.</p>
+</section>
+<section >
+<div class="sd-fs-3 sd-text-center docutils container">
+<p>github.com/obra/superpowers/skills/brainstorming/SKILL.md</p>
+</div>
+</section>
+<section >
+<h4>3. Build upon the refined spec</h4>
+<p>Switch to <cite>build</cite> mode</p>
+</section>
+<section >
+<h4>4. Tips</h4>
+<ul class="simple">
+<li><p>Save the spec for reference/docs</p></li>
+<li><p>Commit everything before switching to <cite>build</cite> mode.</p></li>
+<li><p>Only commit when you understand the change. <cite>git diff</cite> is your friend.</p></li>
+<li><p><a class="reference external" href="https://github.com/wilfred/difftastic">difftastic</a> Help to reduce <cite>git diff</cite> noise.</p></li>
+<li><p><a class="reference external" href="https://github.com/jatinkrmalik/LLMFeeder">LLMFeeder</a> is a browser plugin that converts pages into Markdown</p></li>
+</ul>
+</section>
+</section>
+<section >
+<section >
+<h2>What’s next</h2>
+<ol class="arabic simple">
+<li><p>Create an AGENTS.md and SKILL.md files from scratch for your
+project</p></li>
+<li><p>Create a specific SKILL.md from scratch for your project</p></li>
+<li><p>How to auto-update your documentation (README.md, AGENTS.md, SKILL.md, etc.) with LLMs</p></li>
+</ol>
+</section>
+<section >
+<h3>Agents directories and symlinks</h3>
+<ul class="simple">
+<li><p><cite>.agents/skills/</cite> — for agent-specific skills (understood by most except Claude)</p></li>
+<li><p>Symlink <cite>.claude/skills/</cite> to <cite>.agents/skills/</cite> for Claude compatibility</p></li>
+</ul>
+</section>
+<section >
+<h4>Create <code class="docutils literal notranslate"><span class="pre">~/.agents/skills</span></code> directory in your home directory</h4>
+<pre data-id="create-agents-skills-directory-in-your-home-directory"><code data-trim data-noescape class="sh">mkdir -p ~/.agents/skills</code></pre>
+</section>
+<section >
+<h4>Make a proper symlink to <code class="docutils literal notranslate"><span class="pre">~/.claude/skills</span></code></h4>
+<pre data-id="make-a-proper-symlink-to-claude-skills"><code data-trim data-noescape class="sh">mkdir -p ~/.claude
+cd ~/.claude
+ln -s ../.agents/skills skills</code></pre>
+</section>
+</section>
+<section >
+<section >
+<h2>But let’s show BEFORE and AFTER</h2>
+<div class="sd-d-flex-row sd-align-major-center docutils">
+<a class="reference internal image-reference" href="images/new/confronting_the_agents.png"><img alt="Confronting the agents without AGENTS.md and SKILL.md" class="align-center" src="images/new/confronting_the_agents.png" style="height: 800px;" />
+</a>
+</div>
+</section>
+</section>
+<section >
+<section >
+<h2>Step 0: Tryout with no SKILL.md and no AGENTS.md</h2>
+</section>
+<section >
+<p>I’ll be experimenting on <a class="reference external" href="https://github.com/barseghyanartur/tld">github.com/barseghyanartur/tld</a> repository.</p>
+<pre data-id="step-0-tryout-with-no-skill-md-and-no-agents-md"><code data-trim data-noescape class="sh">cd ~/repos/tld
+opencode</code></pre>
+</section>
+<section >
+<p>Let’s ask an agent to implement a single feature:</p>
+<pre data-id="step-0-tryout-with-no-skill-md-and-no-agents-md"><code data-trim data-noescape class="text">Result.private property — expose whether a domain uses a private TLD
+The TrieNode already tracks private: bool, and process_url already has
+access to the matched node. But Result never surfaces it. Users who care
+about the public/private distinction (e.g., filtering out AWS/GCP
+subdomains) currently have to call get_tld twice with different
+search_private flags to infer it. A single result.private boolean would
+be a clean, zero-cost addition.</code></pre>
+</section>
+<section >
+<p>Even if the agent is able to do it, it will likely fail to:</p>
+<ul class="simple">
+<li><p>Follow the coding standards</p></li>
+<li><p>Fail to run the tests</p></li>
+<li><p>Fail to update the documentation</p></li>
+</ul>
+</section>
+<section >
+<iframe width="100%"
+        height="800px"
+        src="https://www.youtube.com/embed/IgNYXLWS2bM?si=mZ9Xu1kkzlhYVeb1"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+</iframe></section>
+<section >
+<div class="sd-d-flex-row sd-align-major-center docutils">
+<a class="reference internal image-reference" href="images/new/doubts_3_v2.png"><img alt="Write it down first, then ask the LLM" class="align-center" src="images/new/doubts_3_v2.png" style="height: 800px;" />
+</a>
+</div>
+</section>
+</section>
+<section >
+<section >
+<h2>Step 1: Creating an AGENTS.md + basic skills from scratch</h2>
+</section>
+<section >
+<h3>Objective</h3>
+<ul class="simple">
+<li><p>AGENTS.md</p></li>
+<li><p>Supportive SKILL.md’s for:</p>
+<ul>
+<li><p>coding-standards</p></li>
+<li><p>dev-setup</p></li>
+<li><p>dev-workflow</p></li>
+<li><p>pr-review</p></li>
+<li><p>update-documentation</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section >
+<h3>List skills</h3>
+<pre data-id="list-skills"><code data-trim data-noescape class="sh">/skills</code></pre>
+</section>
+<section >
+<h3>Bootstrapping</h3>
+<p><a class="reference external" href="https://github.com/barseghyanartur/dot-agents">github.com/barseghyanartur/dot-agents</a></p>
+<ul class="simple">
+<li><p>No <code class="docutils literal notranslate"><span class="pre">/init</span></code> command</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">/repo-bootstrap</span></code> skill</p></li>
+</ul>
+</section>
+<section >
+<iframe width="100%"
+        height="800px"
+        src="https://www.youtube.com/embed/XT032IZgDDU?si=JpZx2lECPN-T1pVc"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+</iframe></section>
+<section >
+<div class="sd-d-flex-row sd-align-major-center docutils">
+<a class="reference internal image-reference" href="images/new/very_exciting_1.png"><img alt="Awesome!" class="align-center" src="images/new/very_exciting_1.png" style="height: 800px;" />
+</a>
+</div>
+</section>
+</section>
+<section >
+<section >
+<h2>Step 2: Tryout with AGENTS.md and SKILL.md</h2>
+<div class="sd-d-flex-row sd-align-major-center docutils">
+<a class="reference internal image-reference" href="images/new/fighting_agents_with_skills.png"><img alt="Fighting the agents with AGENTS.md and SKILL.md" class="align-center" src="images/new/fighting_agents_with_skills.png" style="height: 800px;" />
+</a>
+</div>
+</section>
+<section >
+<p>Ask the agent to do the same task</p>
+</section>
+<section >
+<iframe width="100%"
+        height="800px"
+        src="https://www.youtube.com/embed/JJuuQhJgbHs?si=DPLh5AzGXCfB5ajB"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+</iframe></section>
+<section >
+<h3>Enjoy watching the agent</h3>
+<ul class="simple">
+<li><p>Doing its work</p></li>
+<li><p>Following the coding standards</p></li>
+<li><p>Running the tests</p></li>
+<li><p>Updating the documentation</p></li>
+</ul>
+</section>
+<section >
+<div class="sd-d-flex-row sd-align-major-center docutils">
+<a class="reference internal image-reference" href="images/new/very_exciting_1.png"><img alt="Awesome!" class="align-center" src="images/new/very_exciting_1.png" style="height: 800px;" />
+</a>
+</div>
+</section>
+</section>
+<section >
+<section >
+<h2>Step 3: Create a specific SKILL.md for migrating from <cite>mypy</cite> to <cite>ty</cite></h2>
+</section>
+<section >
+<pre data-id="step-3-create-a-specific-skill-md-for-migrating-from-mypy-to-ty"><code data-trim data-noescape class="text">/skill-authoring I need a SKILL.md for migrating from `mypy` to `ty`.</code></pre>
+</section>
+<section >
+<iframe width="100%"
+        height="800px"
+        src="https://www.youtube.com/embed/7mBaYTd-4vE?si=LieGoEY45awD7cLt"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+</iframe></section>
+<section >
+<div class="sd-d-flex-row sd-align-major-center docutils">
+<a class="reference internal image-reference" href="images/new/very_exciting_1.png"><img alt="Awesome!" class="align-center" src="images/new/very_exciting_1.png" style="height: 800px;" />
+</a>
+</div>
+</section>
+</section>
+<section >
+<section >
+<h2>Step 4: Auto-updating documentation</h2>
+<ul class="simple">
+<li><p>Analyse code</p></li>
+<li><p>Find misalignments</p></li>
+<li><p>Update docs</p></li>
+</ul>
+</section>
+<section >
+<pre data-id="step-4-auto-updating-documentation"><code data-trim data-noescape class="text">/update-documentation</code></pre>
+</section>
+<section >
+<iframe width="100%"
+        height="800px"
+        src="https://www.youtube.com/embed/omC3a0Zq9bU?si=3yYwL8eSwnqM7lA7"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+</iframe></section>
+<section >
+<div class="sd-d-flex-row sd-align-major-center docutils">
+<a class="reference internal image-reference" href="images/new/very_exciting_1.png"><img alt="Awesome!" class="align-center" src="images/new/very_exciting_1.png" style="height: 800px;" />
+</a>
+</div>
+</section>
+</section>
+<section >
+<section >
+<h2>Step 5: Safe exploration of LLMs and agents</h2>
+<ul class="simple">
+<li><p>At home, on your personal devices</p></li>
+<li><p>Experiment with agents</p></li>
+<li><p>No costs</p></li>
+</ul>
+</section>
+<section >
+<h3>Running LLMs locally</h3>
+<ul class="simple">
+<li><p>No data/privacy concerns</p></li>
+<li><p><a class="reference external" href="https://ollama.com/">Ollama</a> is your fiend.</p></li>
+<li><p><a class="reference external" href="https://ollama.com/library/qwen3.5/tags">Qwen3.5</a> is a great model for agentic coding tasks.</p></li>
+</ul>
+</section>
+<section >
+<p>It works with <a class="reference external" href="https://opencode.ai/">OpenCode</a>:</p>
+<pre data-id="running-llms-locally"><code data-trim data-noescape class="sh">ollama launch opencode --model qwen3.6:35b-a3b-coding-nvfp4</code></pre>
+<p>It works with <a class="reference external" href="https://claude.ai/code">Claude Code</a>:</p>
+<pre data-id="running-llms-locally"><code data-trim data-noescape class="sh">ollama launch claude --model qwen3.6:35b-a3b-coding-nvfp4</code></pre>
+</section>
+<section >
+<h3>Some of the local models I use</h3>
+<pre data-id="some-of-the-local-models-i-use"><code data-trim data-noescape class="text">gemma4:31b                        5571076f3d70    19 GB     5 days ago
+gemma4:e2b                        7fbdbf8f5e45    7.2 GB    5 days ago
+gemma4:e4b                        c6eb396dbd59    9.6 GB    5 days ago
+glm-4.7-flash:latest              d1a8a26252f1    19 GB     7 weeks ago
+nemotron-3-nano:4b                6cc467f05439    2.8 GB    5 days ago
+qwen3.5:0.8b-nvfp4                6d2b253cfc04    1.0 GB    5 days ago
+qwen3.5:27b-coding-nvfp4          d57ac1bd5340    19 GB     5 days ago
+qwen3.5:2b-nvfp4                  0ab1f7a1e882    2.5 GB    5 days ago
+qwen3.6:35b-a3b-coding-nvfp4      6e73b30f8f1c    21 GB     11 days ago
+qwen3.5:4b-nvfp4                  61aa3858e9d3    4.0 GB    5 days ago
+qwen3.5:9b-nvfp4                  203e30078279    8.9 GB    11 days ago</code></pre>
+</section>
+<section >
+<h3>Free tier</h3>
+<ul class="simple">
+<li><p>⚠️ your data will be used for training!</p></li>
+</ul>
+</section>
+<section >
+<p>Use <a class="reference external" href="https://opencode.ai/docs/zen/">OpenCode Zen</a> for free access to agentic LLMs in the cloud:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.minimax.io/news/minimax-m25">MiniMax M2.5</a> Free</p></li>
+<li><p><cite>Big Pickle</cite> Free</p></li>
+<li><p><cite>Nemotron 3 Super</cite> Free</p></li>
+</ul>
+</section>
+<section >
+<p>Or use <a class="reference external" href="https://kiro.dev/">Kiro.dev</a> either as CLI or IDE (VSCode based)</p>
+<ul class="simple">
+<li><p><cite>Claude Sonnet 4.5</cite> Free</p></li>
+<li><p><a class="reference external" href="https://www.minimax.io/news/minimax-m25">MiniMax M2.5</a> Free</p></li>
+<li><p><cite>GLM 5</cite> Free</p></li>
+<li><p><cite>DeepSeek 3.2</cite> Free</p></li>
+</ul>
+</section>
+<section >
+<ul class="simple">
+<li><p>Limits apply</p></li>
+<li><p>Hitting the limit? Time to stop! Keep good life/fun ratio</p></li>
+</ul>
+</section>
+<section >
+<h3>But if you are desperate…</h3>
+<p>Use free tier in <a class="reference external" href="https://ollama.com/">Ollama</a> cloud:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.minimax.io/news/minimax-m25">MiniMax M2.5</a> Free</p></li>
+<li><p><cite>GLM 5</cite> Free</p></li>
+<li><p><cite>Kimi K2.5</cite> Free</p></li>
+</ul>
+</section>
+<section >
+<p>For <a class="reference external" href="https://opencode.ai/">OpenCode</a>:</p>
+<pre data-id="but-if-you-are-desperate"><code data-trim data-noescape class="sh">ollama launch opencode --model glm-5.1:cloud</code></pre>
+<p>For <a class="reference external" href="https://claude.ai/code">Claude Code</a>:</p>
+<pre data-id="but-if-you-are-desperate"><code data-trim data-noescape class="sh">ollama launch claude --model glm-5.1:cloud</code></pre>
+</section>
+</section>
+<section >
+<section >
+<h2>Step 7: Closing words and tips</h2>
+</section>
+<section >
+<h3>Start thinking in SKILLs</h3>
+<ul class="simple">
+<li><p>Repetitive tasks → good candidates for SKILLs</p></li>
+<li><p>Example: setting up logging in every project → create a SKILL.md for logging</p></li>
+<li><p>When designing a skill, think about migration too</p></li>
+</ul>
+</section>
+<section >
+<h3>Benefits?</h3>
+<p>Just think about:</p>
+<ul class="simple">
+<li><p>Colleague: “Can you help me with X?”</p></li>
+<li><p>You: “I can explain it to you”</p></li>
+</ul>
+</section>
+<section >
+<h3>Versus</h3>
+<ul class="simple">
+<li><p>Colleague: “Can you help me with X?”</p></li>
+<li><p>You: “I have a SKILL.md for that, let me show/share it with you”</p></li>
+</ul>
+</section>
+</section>
+<section >
+<section >
+<h2>Questions</h2>
+<div class="sd-d-flex-row sd-align-major-center docutils">
+<a class="reference internal image-reference" href="images/new/very_exciting_1.png"><img alt="Awesome!" class="align-center" src="images/new/very_exciting_1.png" style="height: 800px;" />
+</a>
+</div>
+</section>
+</section>
+<section >
+<section >
+<h2>Links</h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude.pdf">Anthropic: The Complete Guide to Building Skills for Claude</a></p></li>
+<li><p><a class="reference external" href="https://github.com/igorshubovych/markdownlint-cli">markdownlint</a>: Linter for Markdown files</p></li>
+<li><p><a class="reference external" href="https://github.com/pycqa/doc8">doc8</a>: Linter for reStructuredText files</p></li>
+<li><p><a class="reference external" href="https://opencode.ai/">OpenCode</a>: Open-source agent harness with free tier</p></li>
+<li><p><a class="reference external" href="https://claude.ai/code">Claude Code</a>: Agent harness by Anthropic</p></li>
+<li><p><a class="reference external" href="https://kiro.dev/">Kiro.dev</a>: Agentic IDE and harness with free tier</p></li>
+</ul>
+</section>
+<section >
+<ul class="simple">
+<li><p><a class="reference external" href="https://llmstxt.org/">llms.txt</a>: A standard for LLM-optimized documentation</p></li>
+<li><p><a class="reference external" href="https://agents.md/">AGENTS.md</a>: A standard for guiding agents through your codebase</p></li>
+<li><p><a class="reference external" href="https://skill.md/">SKILL.md</a>: A standard for documenting individual skills</p></li>
+<li><p><a class="reference external" href="https://github.com/jatinkrmalik/LLMFeeder">LLMFeeder</a>: A browser plugin that converts pages into Markdown</p></li>
+<li><p><a class="reference external" href="https://github.com/wilfred/difftastic">difftastic</a>: A tool to reduce <cite>git diff</cite> noise and make code changes clearer</p></li>
+<li><p><a class="reference external" href="https://github.com/barseghyanartur/pytest-codeblock">pytest-codeblock</a>: A plugin for testing code blocks in documentation</p></li>
+</ul>
+</section>
+<section >
+<ul class="simple">
+<li><p><a class="reference external" href="https://ollama.com/">Ollama</a>: Free local/cloud models</p></li>
+<li><p><a class="reference external" href="https://github.com/anthropics/skills/">github.com/anthropics/skills</a>: Useful skills</p></li>
+<li><p><a class="reference external" href="https://github.com/obra/superpowers">github.com/obra/superpowers</a>: Useful skills</p></li>
+<li><p><a class="reference external" href="https://github.com/barseghyanartur/dot-agents">github.com/barseghyanartur/dot-agents</a>: Usefull skills</p></li>
+<li><p><a class="reference external" href="https://github.com/forrestchang/andrej-karpathy-skills">github.com/forrestchang/andrej-karpathy-skills</a>: Usefull skills</p></li>
+<li><p><a class="reference external" href="https://barseghyanartur.github.io/gistblog/posts/2026/05/pygrunn-2026-talk-agentic-engineering/">barseghyanartur.github.io/gistblog/posts/2026/05/pygrunn-2026-talk-agentic-engineering/</a></p></li>
+</ul>
+</section>
+
+        </div>
+    </div>
+    
+    <script src="_static/revealjs/dist/reveal.js"></script>
+    
+    
+      <script src="_static/revealjs/plugin/highlight/highlight.js"></script>
+      <script src="_static/revealjs/plugin/notes/notes.js"></script>
+      
+    
+    <script>
+        var revealjsConfig = new Object();
+        Object.assign(revealjsConfig, 
+{
+  // The "normal" size of the presentation, aspect ratio will
+  // be preserved when the presentation is scaled to fit different
+  // resolutions. Can be specified using percentage units.
+  // Original resolution: 960 x 700
+  // For large screen: 1920 x 900
+  width: 1920,
+  height: 900,
+
+  // Factor of the display size that should remain empty around
+  // the content
+  margin: 0.04,
+
+  // Bounds for smallest/largest possible scale to apply to content
+  minScale: 0.2,
+  maxScale: 2.0,
+}
+);
+        
+        
+        
+          revealjsConfig.plugins = [
+            RevealHighlight,RevealNotes,
+          ];
+        
+        // More info https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize(revealjsConfig);
+    </script>
+
+  </body>
+</html>
